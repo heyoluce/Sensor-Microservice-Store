@@ -1,8 +1,7 @@
-package com.zholdoshov.datastoremicroservice;
+package com.zholdoshov.datastoremicroservice.web.mapper;
 
 import com.zholdoshov.datastoremicroservice.model.Summary;
 import com.zholdoshov.datastoremicroservice.web.dto.SummaryDto;
-import com.zholdoshov.datastoremicroservice.web.mapper.Mappable;
 import org.mapstruct.Mapper;
 
 
