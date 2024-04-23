@@ -1,5 +1,6 @@
 package com.zholdoshov.datastoremicroservice.repo;
 
+import com.zholdoshov.datastoremicroservice.model.Data;
 import com.zholdoshov.datastoremicroservice.model.MeasurementType;
 import com.zholdoshov.datastoremicroservice.model.Summary;
 import com.zholdoshov.datastoremicroservice.model.SummaryType;
@@ -13,5 +14,9 @@ public interface SummaryRepository {
             Long sensorId,
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
+    );
+
+    void handle(
+            Data data
     );
 }

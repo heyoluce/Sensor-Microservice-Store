@@ -24,6 +24,7 @@ public class Summary {
     public static class SummaryEntry {
         private SummaryType type;
         private double value;
+        private Long counter;
     }
 
     public Summary() {

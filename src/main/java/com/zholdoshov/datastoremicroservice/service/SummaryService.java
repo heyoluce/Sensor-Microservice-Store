@@ -1,5 +1,6 @@
 package com.zholdoshov.datastoremicroservice.service;
 
+import com.zholdoshov.datastoremicroservice.model.Data;
 import com.zholdoshov.datastoremicroservice.model.MeasurementType;
 import com.zholdoshov.datastoremicroservice.model.Summary;
 import com.zholdoshov.datastoremicroservice.model.SummaryType;
@@ -13,4 +14,6 @@ public interface SummaryService {
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
     );
+
+    void handle(Data data);
 }

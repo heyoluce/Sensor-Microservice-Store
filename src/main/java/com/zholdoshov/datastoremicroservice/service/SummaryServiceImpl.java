@@ -1,6 +1,7 @@
 package com.zholdoshov.datastoremicroservice.service;
 
 import com.zholdoshov.datastoremicroservice.exception.SensorNotFoundException;
+import com.zholdoshov.datastoremicroservice.model.Data;
 import com.zholdoshov.datastoremicroservice.model.MeasurementType;
 import com.zholdoshov.datastoremicroservice.model.Summary;
 import com.zholdoshov.datastoremicroservice.model.SummaryType;
@@ -28,5 +29,10 @@ public class SummaryServiceImpl implements SummaryService {
                 summaryTypes == null ? Set.of(SummaryType.values()) : summaryTypes
         )
                 .orElseThrow(SensorNotFoundException::new);
+    }
+
+    @Override
+    public void handle(Data data) {
+        summaryRepository.handle(data);
     }
 }
